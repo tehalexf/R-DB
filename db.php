@@ -1,14 +1,15 @@
 <?php
     $MYSQL_HOSTNAME = "localhost";
-    $MYSQL_USER     = "username";
-    $MYSQL_PASS     = "password";
-    $MYSQL_PROJ_DB  = "Main DB Table";
+    $MYSQL_USER     = "res-ex";
+    $MYSQL_PASS     = "shangrila07";
+    $MYSQL_PROJ_DB  = "res-ex";
 
 	$mysql_default_connection = mysqli_connect($MYSQL_HOSTNAME,$MYSQL_USER,$MYSQL_PASS, $MYSQL_PROJ_DB) or die(mysql_error());
 
-	function sql_iter($query) 
-    		return (mysqli_fetch_array($query));
-
+	function sql_iter($query)
+	{
+    		return mysqli_fetch_array($query);
+    }
 	class R_DB
 	{
 		public $current_connection;
